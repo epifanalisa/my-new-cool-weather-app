@@ -1,0 +1,67 @@
+.whole-app {
+  margin: 5px;
+  max-width: 600px;
+  padding: 40px;
+  color: rgb(97, 95, 95);
+  font-family: "Lato", sans-serif;
+  background-color: rgb(229, 239, 229);
+}
+
+#a-city-input {
+  line-height: 30px;
+  padding-left: 10px;
+  border: solid 0.5px #615f5f;
+  border-radius: 4px;
+}
+.btn-warning,
+.btn-success {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.five-days-info h5 {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.temperature {
+  font-size: 16px;
+  font-weight: 600;
+}
+.fa-solid {
+  font-size: 20px;
+  line-height: 20px;
+  color: orange;
+}
+.current-city-info {
+  text-align: center;
+}
+.current-date {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+}
+#current-city {
+  font-size: 28px;
+  font-weight: 900;
+}
+#temperature {
+  font-size: 22px;
+  font-weight: 800;
+}
+#celsius-link,
+#farengheit-link {
+  font-size: 14px;
+}
+.current-weather-icon {
+  font-size: 30px;
+  line-height: 34px;
+}
+
+.current-wind-hum {
+  font-size: 14px;
+}
+.card-body {
+  padding: 0px;
+}
