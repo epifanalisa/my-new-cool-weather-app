@@ -65,3 +65,9 @@
 .card-body {
   padding: 0px;
 }
+.open-source-link {
+  font-size: 12px;
+  margin: 5px;
+  color: rgb(97, 95, 95);
+  font-family: "Lato", sans-serif;
+}
