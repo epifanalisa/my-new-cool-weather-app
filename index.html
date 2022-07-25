@@ -37,8 +37,8 @@
                 <div class="current-temperature">
                   <span id="temperature"></span>
                   <span class="units">
-                    <a href="#" id="celsius-link">°C</a> |
-                    <a href="#" id="farengheit-link">°F</a>
+                    <a href="#" id="celsius-link" class="active">°C </a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
                   </span>
                 </div>
 
@@ -64,7 +64,11 @@
                       placeholder="Enter a city"
                       autocomplete="off"
                     />
-                    <input type="submit" value="Search" class="btn btn-light" />
+                    <input
+                      type="submit"
+                      value="Search"
+                      class="btn btn-secondary"
+                    />
                     <input
                       type="submit"
                       id="search-current-location"
@@ -77,17 +81,15 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
       </div>
-      <span class="open-source-link">
+      <div class="open-source-link">
         <a
           href="https://github.com/epifanalisa/my-new-cool-weather-app"
           target="_blank"
           >Open-source code</a
         >
         by Alisa Epifanova
-      </span>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>

@@ -37,7 +37,9 @@ function showTemperature(response) {
   let cityName = document.querySelector("#current-city");
   cityName.innerHTML = response.data.name;
 
-  let cityCurrentTemp = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+
+  let cityCurrentTemp = Math.round(celsiusTemperature);
   let cityTodayTemp = document.querySelector("#temperature");
   cityTodayTemp.innerHTML = cityCurrentTemp;
 
@@ -71,8 +73,6 @@ function handleCitySearch(event) {
   search(cityName);
 }
 
-search("Dnipro");
-
 function searchLocation(position) {
   let apiKey = "c3a1a5230563e615b6290132c320c7ca";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -84,10 +84,36 @@ function showCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function changeToFahrenheit(event) {
+  event.preventDefault();
+  celsiusUnits.classList.remove("active");
+  fahrenheitUnits.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function changeToCelsius(event) {
+  event.preventDefault();
+  celsiusUnits.classList.add("active");
+  fahrenheitUnits.classList.remove("active");
+
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleCitySearch);
 
-//Bonus
-
 let currentButton = document.querySelector("#search-current-location");
 currentButton.addEventListener("click", showCurrentLocation);
+
+let fahrenheitUnits = document.querySelector("#fahrenheit-link");
+fahrenheitUnits.addEventListener("click", changeToFahrenheit);
+
+let celsiusUnits = document.querySelector("#celsius-link");
+celsiusUnits.addEventListener("click", changeToCelsius);
+
+search("Dnipro");

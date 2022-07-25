@@ -1,27 +1,10 @@
 .whole-app {
-  margin: 5px;
+  margin: 12px;
   max-width: 600px;
-  padding: 40px;
+  padding: 40px 20px;
   color: rgb(97, 95, 95);
   font-family: "Lato", sans-serif;
   background-color: rgb(229, 239, 229);
-}
-
-#a-city-input {
-  width: 70%;
-  line-height: 28px;
-  padding-left: 10px;
-  border: solid 0.5px #615f5f;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.btn-light,
-.btn-secondary {
-  font-size: 14px;
-  font-weight: bold;
-  width: 35%;
-  padding: 3px;
 }
 
 .current-city-info {
@@ -45,15 +28,20 @@
   line-height: 1;
 }
 
+.current-temperature .active {
+  color: rgb(97, 95, 95);
+  cursor: default;
+}
+
 .units {
   text-decoration: none;
-  font-size: 10px;
+  font-size: 11px;
   position: relative;
   top: -10px;
 }
 
 #celsius-link,
-#farengheit-link {
+#fahrenheit-link {
   text-decoration: none;
 }
 
@@ -71,6 +59,28 @@
   text-transform: capitalize;
   font-style: normal;
 }
+#a-city-input {
+  width: 70%;
+  line-height: 28px;
+  padding-left: 10px;
+  border: solid 0.5px #615f5f;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-light {
+  font-size: 14px;
+  font-weight: bold;
+  width: 35%;
+  padding: 3px;
+}
+
+.btn-light {
+  border: 1px solid rgb(97, 95, 95);
+}
+
 .five-days-info h5 {
   font-size: 14px;
   font-weight: 600;
@@ -80,6 +90,7 @@
 .temperature {
   font-size: 16px;
   font-weight: 600;
+  margin-left: 0 auto;
 }
 
 .fa-solid {
@@ -91,7 +102,7 @@
 }
 .open-source-link {
   font-size: 12px;
-  margin: 5px;
+  margin-left: 25px;
   color: rgb(97, 95, 95);
   font-family: "Lato", sans-serif;
 }
