@@ -33,8 +33,6 @@ let now = new Date();
 let currentTime = document.querySelector(".current-date");
 currentTime.innerHTML = formatDate(now);
 
-//week5 challenge 1
-
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
 
@@ -49,6 +47,8 @@ function showTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let cityTodayWind = document.querySelector("#windspeed");
   cityTodayWind.innerHTML = wind;
+
+  console.log(response.data);
 }
 
 function searchCity(event) {
