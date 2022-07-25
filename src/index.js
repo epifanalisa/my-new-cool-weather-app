@@ -34,7 +34,8 @@ let currentTime = document.querySelector(".current-date");
 currentTime.innerHTML = formatDate(now);
 
 function showTemperature(response) {
-  document.querySelector("#current-city").innerHTML = response.data.name;
+  let cityName = document.querySelector("#current-city");
+  cityName.innerHTML = response.data.name;
 
   let cityCurrentTemp = Math.round(response.data.main.temp);
   let cityTodayTemp = document.querySelector("#temperature");
@@ -47,18 +48,22 @@ function showTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let cityTodayWind = document.querySelector("#windspeed");
   cityTodayWind.innerHTML = wind;
-
-  console.log(response.data);
 }
 
-function searchCity(event) {
-  event.preventDefault();
-
-  let cityName = document.querySelector("#a-city-input").value;
+function search(cityName) {
   let apiKey = "c3a1a5230563e615b6290132c320c7ca";
+
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
+
+function handleCitySearch(event) {
+  event.preventDefault();
+  let cityName = document.querySelector("#a-city-input").value;
+  search(cityName);
+}
+
+search("Dnipro");
 
 function searchLocation(position) {
   let apiKey = "c3a1a5230563e615b6290132c320c7ca";
@@ -72,7 +77,7 @@ function showCurrentLocation(event) {
 }
 
 let form = document.querySelector("#search-city-form");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleCitySearch);
 
 //Bonus
 
