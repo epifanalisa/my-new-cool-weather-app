@@ -10,7 +10,8 @@
 .current-city-info {
   text-align: center;
 }
-.current-date {
+.current-date,
+.weather-forecast {
   font-size: 14px;
   font-style: italic;
   font-weight: bold;
@@ -81,22 +82,15 @@
   border: 1px solid rgb(97, 95, 95);
 }
 
-.five-days-info h5 {
-  font-size: 14px;
-  font-weight: 600;
-  font-style: italic;
+.weather-forecast {
+  padding: 30px 40px 0px 40px;
+  text-align: center;
 }
 
-.temperature {
-  font-size: 16px;
-  font-weight: 600;
-  margin-left: 0 auto;
+.forecast-temp-min {
+  opacity: 0.6;
 }
 
-.fa-solid {
-  font-size: 20px;
-  line-height: 20px;
-}
 .card-body {
   padding: 0px;
 }
