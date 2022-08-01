@@ -1,5 +1,5 @@
 .whole-app {
-  margin: 12px;
+  margin: 10px 0 10px;
   max-width: 600px;
   padding: 40px 20px;
   color: rgb(97, 95, 95);
@@ -7,20 +7,25 @@
   background-color: rgb(229, 239, 229);
 }
 
+.card-body {
+  padding: 0px;
+}
+
 .current-city-info {
   text-align: center;
 }
+
 .current-date,
-.weather-forecast {
+.weather-forecast,
+.current-wind-hum-description {
   font-size: 14px;
-  font-style: italic;
-  font-weight: bold;
 }
+
 #current-city {
   line-height: 1;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 800;
-  margin: 7px;
+  margin: 10px;
 }
 
 .current-temperature {
@@ -51,21 +56,17 @@
   line-height: 1;
 }
 
-.current-wind-hum-description {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: bold;
-}
 #description:first-letter {
   text-transform: capitalize;
   font-style: normal;
 }
+
 #a-city-input {
-  width: 70%;
+  width: 80%;
   line-height: 28px;
   padding-left: 10px;
-  border: solid 0.5px #615f5f;
-  border-radius: 4px;
+  border: solid 0.5px #5b6369;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
@@ -74,29 +75,37 @@
 .btn-light {
   font-size: 14px;
   font-weight: bold;
-  width: 35%;
+  width: 40%;
   padding: 3px;
 }
 
 .btn-light {
-  border: 1px solid rgb(97, 95, 95);
+  color: #5b6369;
+  border: 0.5px solid #5b6369;
 }
 
 .weather-forecast {
-  padding: 30px 40px 0px 40px;
+  padding: 30px 30px 0px;
   text-align: center;
 }
 
+.weather-forecast-date {
+  font-weight: bold;
+}
+
+.forecast-temperatures {
+  font-style: normal;
+}
+
+.forecast-temp-max {
+  font-style: bolder;
+}
 .forecast-temp-min {
   opacity: 0.6;
 }
 
-.card-body {
-  padding: 0px;
-}
 .open-source-link {
   font-size: 12px;
-  margin-left: 25px;
   color: rgb(97, 95, 95);
   font-family: "Lato", sans-serif;
 }
