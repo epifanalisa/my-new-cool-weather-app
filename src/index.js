@@ -91,22 +91,17 @@ function showTemperature(response) {
   let cityName = document.querySelector("#current-city");
   cityName.innerHTML = response.data.name;
 
-  celsiusTemperature = response.data.main.temp;
-
-  let cityCurrentTemp = Math.round(celsiusTemperature);
   let cityTodayTemp = document.querySelector("#temperature");
-  cityTodayTemp.innerHTML = cityCurrentTemp;
+  cityTodayTemp.innerHTML = Math.round(response.data.main.temp);
 
   let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = response.data.weather[0].description;
 
-  let cityHumidity = response.data.main.humidity;
   let cityTodayHumidity = document.querySelector("#humidity");
-  cityTodayHumidity.innerHTML = cityHumidity;
+  cityTodayHumidity.innerHTML = response.data.main.humidity;
 
-  let wind = Math.round(response.data.wind.speed);
   let cityTodayWind = document.querySelector("#windspeed");
-  cityTodayWind.innerHTML = wind;
+  cityTodayWind.innerHTML = Math.round(response.data.wind.speed);
 
   let currentWeatherIcon = document.querySelector("#current-weather-icon");
   currentWeatherIcon.setAttribute(
