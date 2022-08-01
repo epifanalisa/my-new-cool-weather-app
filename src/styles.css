@@ -34,21 +34,10 @@
   line-height: 1;
 }
 
-.current-temperature .active {
-  color: rgb(97, 95, 95);
-  cursor: default;
-}
-
 .units {
-  text-decoration: none;
-  font-size: 11px;
+  font-size: 12px;
   position: relative;
-  top: -10px;
-}
-
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
+  top: -8px;
 }
 
 #current-weather-icon {
@@ -91,10 +80,6 @@
 
 .weather-forecast-date {
   font-weight: bold;
-}
-
-.forecast-temperatures {
-  font-style: normal;
 }
 
 .forecast-temp-max {
