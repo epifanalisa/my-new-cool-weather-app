@@ -59,18 +59,11 @@
   margin-bottom: 10px;
 }
 
-.btn-primary,
-.btn-secondary,
-.btn-light {
+.btn-secondary {
   font-size: 14px;
   font-weight: bold;
   width: 40%;
   padding: 3px;
-}
-
-.btn-light {
-  color: #5b6369;
-  border: 0.5px solid #5b6369;
 }
 
 .weather-forecast {
