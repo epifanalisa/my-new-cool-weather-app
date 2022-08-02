@@ -65,6 +65,10 @@
   padding: 3px;
 }
 
+.col-2 {
+  padding: 0px 10px;
+}
+
 .weather-forecast {
   padding: 30px 30px 0px;
   text-align: center;
